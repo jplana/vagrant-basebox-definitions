@@ -24,6 +24,9 @@ apt-get -y install ruby ruby-dev libopenssl-ruby1.8 irb ri rdoc
 # Instal Puppet from packages
 apt-get -y install puppet/squeeze-backports puppet-common/squeeze-backports augeas-lenses/squeeze-backports augeas-tools/squeeze-backports libaugeas0/squeeze-backports
 
+# Add puppet group for vagrant
+groupadd puppet
+
 # Install vagrant keys
 mkdir -p /home/vagrant/.ssh
 chmod 700 /home/vagrant/.ssh
@@ -56,7 +59,7 @@ umount /mnt
 apt-get -y remove linux-headers-$(uname -r) build-essential
 apt-get -y autoremove
 
-rm /tmp/VBoxGuestAdditions_$VBOX_VERSION.iso 
+rm /tmp/VBoxGuestAdditions_$VBOX_VERSION.iso
 
 # Zero out the free space to save space in the final image:
 dd if=/dev/zero of=/EMPTY bs=1M
