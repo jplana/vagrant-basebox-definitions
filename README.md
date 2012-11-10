@@ -47,17 +47,17 @@ Debian6 with the debian6 backports and puppetlabs repo added, some packages remo
    
  5. Include your basebox in your Vagrantfile:
 
-
+    ```ruby
     Vagrant::Config.run do |config|
         config.vm.define :blogserver do |blogserver_config|
         blogserver_config.vm.box = "[basebox-name]"
-        blogserver_config.vm.provision :puppet do |puppet|`
+        blogserver_config.vm.provision :puppet do |puppet|
         .
         .
-        .
-        
-
+        . 
+    ```
+    
 ## Notes 
 
- - vagrant basebox validate won't be successfull as the boxes don't include the chef packages.
- - The basebox are usually based on the default templates included in veewee
+ - vagrant basebox validate won't success as the boxes don't include the chef packages.
+ - The basebox are usually based on the default templates from veewee
