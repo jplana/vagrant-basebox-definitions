@@ -59,5 +59,5 @@ Debian6 with the debian6 backports and puppetlabs repo added, some packages remo
     
 ## Notes 
 
- - vagrant basebox validate won't success as the boxes don't include the chef packages.
+ - vagrant won't validate as the boxes don't include the chef packages.
  - The basebox are usually based on the default templates from veewee
